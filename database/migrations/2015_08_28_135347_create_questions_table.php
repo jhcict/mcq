@@ -16,6 +16,8 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->string('question');
             $table->longText('explanation');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

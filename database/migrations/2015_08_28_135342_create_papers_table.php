@@ -18,6 +18,8 @@ class CreatePapersTable extends Migration
             $table->string('description');
             $table->year('year');
             $table->boolean('official');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
