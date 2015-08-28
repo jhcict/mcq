@@ -1,6 +1,6 @@
 <?php namespace App;
 
-use Zizaco\Entrust\EntrustApp\Permission as EntrustPermission;
+use Zizaco\Entrust\EntrustPermission;
 
 class Permission extends EntrustPermission
 {
