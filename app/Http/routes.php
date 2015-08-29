@@ -22,15 +22,15 @@ Route::resource('discussionpost', 'DiscussionPostController');
 Route::group(
     [
     'prefix'=> 'admin',
-    'namespace'=>'admin',
+    'namespace'=>'Admin',
     'middleware'=>'admin'],
     function () {
-        Route::resource('subjects', 'SubjectController');
-        Route::resource('papers', 'PaperController');
-        Route::resource('questions', 'QuestionController');
         Route::resource('users', 'UserController');
         Route::resource('roles', 'RoleController');
         Route::resource('category', 'CategoryController');
+        Route::resource('subjects', 'SubjectController');
+        Route::resource('papers', 'PaperController');
+        Route::resource('questions', 'QuestionController');
         Route::resource('answer', 'AnswerController');
     }
 );
