@@ -19,12 +19,12 @@ Route::group(
     'namespace'=>'Admin',
     'middleware'=>\App\Http\Middleware\Admin::class ],
     function () {
-        Route::resource('users', 'UserController');
-        Route::resource('roles', 'RoleController');
+        Route::resource('user', 'UserController');
+        Route::resource('role', 'RoleController');
         Route::resource('category', 'CategoryController');
-        Route::resource('subjects', 'SubjectController');
-        Route::resource('papers', 'PaperController');
-        Route::resource('questions', 'QuestionController');
+        Route::resource('subject', 'SubjectController');
+        Route::resource('paper', 'PaperController');
+        Route::resource('question', 'QuestionController');
         Route::resource('answer', 'AnswerController');
         Route::controller('/', 'DashboardController');
     }
