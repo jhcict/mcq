@@ -12,15 +12,18 @@ class CreatePapersTable extends Migration
      */
     public function up()
     {
-        Schema::create('papers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('description');
-            $table->year('year');
-            $table->boolean('official');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        Schema::create(
+            'papers',
+            function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->string('description');
+                $table->year('year');
+                $table->boolean('official');
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

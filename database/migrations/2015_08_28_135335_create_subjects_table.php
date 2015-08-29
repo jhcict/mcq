@@ -12,14 +12,17 @@ class CreateSubjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subjects', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->char('code', 3);
-            $table->string('abbreviation');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        Schema::create(
+            'subjects',
+            function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->char('code', 3);
+                $table->string('abbreviation');
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**
