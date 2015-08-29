@@ -7,16 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{action('HomeController@getIndex')}}">Edlara v2</a>
+            <a class="navbar-brand" href="{{action('Admin\DashboardController@getIndex')}}">Edlara v2</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="{{action('Admin\HomeController@getIndex')}}">Dashboard</a></li>
-                <li><a href="{{action('Admin\TutorialController@index')}}">Tutorials</a></li>
-                <li><a href="{{action('Admin\AssessmentController@index')}}">Assessments</a></li>
-                <li><a href="{{action('Admin\PresentationController@index')}}">Presentations</a></li>
-                <li><a href="{{action('Admin\ExamController@index')}}">Exams</a></li>
+                <li><a href="{{action('Admin\DashboardController@getIndex')}}">Dashboard</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
