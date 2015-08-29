@@ -17,7 +17,7 @@ Route::group(
     [
     'prefix'=> 'admin',
     'namespace'=>'Admin',
-    'middleware'=>'Admin'],
+    'middleware'=>\App\Http\Middleware\Admin::class ],
     function () {
         Route::resource('users', 'UserController');
         Route::resource('roles', 'RoleController');
@@ -26,6 +26,7 @@ Route::group(
         Route::resource('papers', 'PaperController');
         Route::resource('questions', 'QuestionController');
         Route::resource('answer', 'AnswerController');
+        Route::controller('/', 'DashboardController');
     }
 );
 
