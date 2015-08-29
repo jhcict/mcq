@@ -14,8 +14,13 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('no');
             $table->string('question');
             $table->longText('explanation');
+            $table->enum('language',['ta','en','si','generic']);
+            $table->integer('paper_id')->unsigned();
+            $table->foreign('paper_id')->references('id')->on('papers')
+                ->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
