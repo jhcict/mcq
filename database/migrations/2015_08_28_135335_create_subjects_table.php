@@ -20,7 +20,7 @@ class CreateSubjectsTable extends Migration
                 $table->char('code', 3);
                 $table->string('abbreviation');
                 $table->integer('category_id')->unsigned();
-                $table->foreign('cateogory_id')->references('id')
+                $table->foreign('category_id')->references('id')
                     ->on('category')->onDelete('cascade');
                 $table->timestamps();
                 $table->softDeletes();

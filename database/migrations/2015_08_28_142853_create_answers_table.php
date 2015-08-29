@@ -17,7 +17,6 @@ class CreateAnswersTable extends Migration
             function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('type');
-                $table->blob('resource');
                 $table->longText('textual');
                 $table->boolean('correct');
                 $table->integer('question_id')->unsigned();
