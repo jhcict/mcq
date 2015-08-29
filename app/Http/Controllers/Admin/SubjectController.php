@@ -22,7 +22,7 @@ class SubjectController extends Controller
      *
      * @return Response
      */
-    public function index(Subject $subject)
+    public function index(\App\Subject $subject)
     {
         $subjects = $subject->all();
 

@@ -15,7 +15,7 @@
 
 Route::group(
     [
-    'prefix'=> 'admin',
+    'prefix'=> '/admin',
     'namespace'=>'Admin',
     'middleware'=>\App\Http\Middleware\Admin::class ],
     function () {
