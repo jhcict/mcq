@@ -11,12 +11,6 @@
  * @link     https://mcq.learntechnologies.org/
  */
 
-Route::controller('/', 'HomeController');
-Route::resource('paper', 'PaperController');
-Route::resource('questions', 'QuestionController');
-Route::resource('answer', 'AnswerController');
-Route::resource('discussion', 'DiscussionControoler');
-Route::resource('discussionpost', 'DiscussionPostController');
 
 
 Route::group(
@@ -34,3 +28,16 @@ Route::group(
         Route::resource('answer', 'AnswerController');
     }
 );
+
+
+
+Route::controller('auth', 'Auth\AuthController');
+Route::controller('password', 'Auth\PasswordController');
+Route::controller('/','HomeController');
+
+
+Route::resource('paper', 'PaperController');
+Route::resource('questions', 'QuestionController');
+Route::resource('answer', 'AnswerController');
+Route::resource('discussion', 'DiscussionControoler');
+Route::resource('discussionpost', 'DiscussionPostController');
