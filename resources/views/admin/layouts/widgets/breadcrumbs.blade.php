@@ -1,0 +1,3 @@
+<hr/>
+{!!Breadcrumbs::render()!!}
+<hr/>
