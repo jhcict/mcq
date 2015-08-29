@@ -12,12 +12,18 @@ class CreateDiscussionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('discussions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->mediumText('description');
-            $table->timestamps();
-        });
+        Schema::create(
+            'discussions',
+            function (Blueprint $table) {
+                    $table->increments('id');
+                    $table->string('name');
+                    $table->mediumText('description');
+                    $table->integer('link_id')->unsigned();
+                    $table->string('link_type');
+                    $table->timestamps();
+
+            }
+        );
     }
 
     /**
