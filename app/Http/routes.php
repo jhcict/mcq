@@ -17,7 +17,7 @@ Route::group(
     [
     'prefix'=> 'admin',
     'namespace'=>'Admin',
-    'middleware'=>'admin'],
+    'middleware'=>'Admin'],
     function () {
         Route::resource('users', 'UserController');
         Route::resource('roles', 'RoleController');
