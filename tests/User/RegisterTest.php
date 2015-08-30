@@ -1,18 +1,14 @@
 <?php
 
 
-
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RegisterTest extends TestCase
 {
-
     use DatabaseTransactions;
 
     /**
-     * Testing user Registration
+     * Testing user Registration.
      *
      * @return void
      */
@@ -29,6 +25,4 @@ class RegisterTest extends TestCase
             ->press('Register')
             ->seePageIs('/');
     }
-
-
 }

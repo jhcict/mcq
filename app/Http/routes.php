@@ -1,26 +1,25 @@
 <?php
+
 /**
- * Routes File
+ * Routes File.
  *
  * PHP Version 5
  *
  * @category Routing
- * @package  LearnMCQ
+ *
  * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
  * @license  MIT https://license.mit.edu
+ *
  * @link     https://mcq.learntechnologies.org/
  */
-
-
-
 Route::group(
     [
-    'prefix'=> '/admin',
-    'namespace'=>'Admin',
-    'middleware'=>[
+    'prefix'     => '/admin',
+    'namespace'  => 'Admin',
+    'middleware' => [
         \App\Http\Middleware\Authenticate::class,
         \App\Http\Middleware\Admin::class,
-        ]
+        ],
     ],
     function () {
         Route::resource('user', 'UserController');
@@ -34,12 +33,9 @@ Route::group(
     }
 );
 
-
-
 Route::controller('auth', 'Auth\AuthController');
 Route::controller('password', 'Auth\PasswordController');
 Route::controller('/', 'HomeController');
-
 
 Route::resource('paper', 'PaperController');
 Route::resource('questions', 'QuestionController');
