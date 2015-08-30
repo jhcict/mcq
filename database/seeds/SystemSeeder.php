@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
+use App\Role as Role;
+use App\User as User;
+use App\Permission as Permission;
 /**
  * Class: SystemSeeder
  *
@@ -264,7 +267,7 @@ class SystemSeeder extends Seeder
             [
             'name' => 'Gnanakeethan Balasubramaniam',
             'email' => 'gnanakeethan@gmail.com',
-            'password' => bcrypt($data['password']),
+            'password' => bcrypt('password'),
             ]
         );
 
