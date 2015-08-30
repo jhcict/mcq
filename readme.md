@@ -1,4 +1,4 @@
-#learnMCQ
+#learnMCQ [![Build Status](https://travis-ci.org/jhcict/mcq.svg?branch=master)](https://travis-ci.org/jhcict/mcq)
 
 
 This is an initiative to solve the problem we face when we discuss about a MCQ paper. Many people will definitely end up arguing that they have got a excellent answer.
