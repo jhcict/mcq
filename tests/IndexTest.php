@@ -4,7 +4,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class IndexTest extends TestCase
 {
 
     use DatabaseTransactions;
@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testHomePage()
     {
         $this->visit('/')
              ->see('learnMCQ');
