@@ -32,7 +32,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('guest', [ 'except' => 'getLogout' ]);
     }
 
     /**
@@ -63,9 +63,9 @@ class AuthController extends Controller
     {
         return User::create(
             [
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'name' => $data[ 'name' ],
+            'email' => $data[ 'email' ],
+            'password' => bcrypt($data[ 'password' ]),
             ]
         );
     }

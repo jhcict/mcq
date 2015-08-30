@@ -14,7 +14,7 @@ class CreateDiscussionpostsTable extends Migration
     {
         Schema::create(
             'discussion_posts',
-            function (Blueprint $table) {
+            function(Blueprint $table) {
                 $table->increments('id');
                 $table->longText('post');
                 $table->integer('discussion_id')->unsigned();

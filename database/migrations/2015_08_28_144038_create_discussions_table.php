@@ -14,7 +14,7 @@ class CreateDiscussionsTable extends Migration
     {
         Schema::create(
             'discussions',
-            function (Blueprint $table) {
+            function(Blueprint $table) {
                     $table->increments('id');
                     $table->string('name');
                     $table->mediumText('description');
