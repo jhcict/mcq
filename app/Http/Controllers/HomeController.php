@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     /**
-     * undocumented function
+     * undocumented function.
      *
      * @return void
      */
@@ -18,5 +15,4 @@ class HomeController extends Controller
     {
         return view('index');
     }
-
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $table="category";
+    protected $table = 'category';
     //
 }

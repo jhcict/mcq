@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace app\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
     /**
-     * Admin Home Page
+     * Admin Home Page.
      *
      * @return Response
      */
@@ -18,5 +15,4 @@ class DashboardController extends Controller
     {
         return view('admin.index');
     }
-
 }

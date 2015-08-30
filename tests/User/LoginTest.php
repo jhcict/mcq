@@ -1,14 +1,10 @@
 <?php
 
 
-
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LoginTest extends TestCase
 {
-
     use DatabaseTransactions;
 
     /**
@@ -28,10 +24,8 @@ class LoginTest extends TestCase
             ->seePageIs('/');
     }
 
-
-
     /**
-     * Testing the login with admin redirect
+     * Testing the login with admin redirect.
      *
      * @return void
      */
@@ -44,11 +38,10 @@ class LoginTest extends TestCase
             ->type('password', 'password')
             ->press('Login')
             ->seePageIs('/admin');
-
     }
 
     /**
-     * Testing the login with Invalid Credentials
+     * Testing the login with Invalid Credentials.
      *
      * @return void
      */
@@ -63,7 +56,5 @@ class LoginTest extends TestCase
             ->press('Login')
             ->seePageIs('/auth/login')
             ->see('These credentials do not match our records.');
-
     }
-
 }
