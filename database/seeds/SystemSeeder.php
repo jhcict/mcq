@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 use App\Role as Role;
 use App\User as User;
 use App\Permission as Permission;
