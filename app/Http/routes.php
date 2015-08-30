@@ -17,7 +17,11 @@ Route::group(
     [
     'prefix'=> '/admin',
     'namespace'=>'Admin',
-    'middleware'=>\App\Http\Middleware\Admin::class ],
+    'middleware'=>[
+        \App\Http\Middleware\Authenticate::class,
+        \App\Http\Middleware\Admin::class,
+        ]
+    ],
     function () {
         Route::resource('user', 'UserController');
         Route::resource('role', 'RoleController');
@@ -34,7 +38,7 @@ Route::group(
 
 Route::controller('auth', 'Auth\AuthController');
 Route::controller('password', 'Auth\PasswordController');
-Route::controller('/','HomeController');
+Route::controller('/', 'HomeController');
 
 
 Route::resource('paper', 'PaperController');
