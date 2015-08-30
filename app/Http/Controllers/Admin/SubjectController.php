@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 /**
@@ -18,9 +16,9 @@ class SubjectController extends Controller
     /**
      * Display a listing of Subjects available as of now
      *
-     * @param Subject $subject Model Class
+     * @param \App\Subject $subject Model Class
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function index(\App\Subject $subject)
     {

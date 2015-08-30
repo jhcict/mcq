@@ -1,15 +1,15 @@
 <?php
 /**
- * Routes File
- *
- * PHP Version 5
- *
- * @category Routing
- * @package  LearnMCQ
- * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
- * @license  MIT https://license.mit.edu
- * @link     https://mcq.learntechnologies.org/
- */
+     * Routes File
+     *
+     * PHP Version 5
+     *
+     * @category Routing
+     * @package  LearnMCQ
+     * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
+     * @license  MIT https://license.mit.edu
+     * @link     https://mcq.learntechnologies.org/
+     */
 
 
 
@@ -22,7 +22,7 @@ Route::group(
         \App\Http\Middleware\Admin::class,
         ]
     ],
-    function () {
+    function() {
         Route::resource('user', 'UserController');
         Route::resource('role', 'RoleController');
         Route::resource('category', 'CategoryController');
