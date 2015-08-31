@@ -17,7 +17,12 @@
                             <tr>
                                 <td>{{$category->id}}</td>
                                 <td>{{$category->name}}</td>
-                                <td></td>
+                                <td>
+                                    <!-- .btn -->
+                                    <a class="btn btn-warning" href="{{route('admin.category.edit',$category->id)}}">Edit</a>
+                                    <!-- /.btn -->
+
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

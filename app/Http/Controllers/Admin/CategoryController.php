@@ -15,9 +15,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Http\Controllers\Controller;
 use App\Category;
 use App\Jobs\Category\Create as CreateJob;
+use App\Jobs\Category\UpdateJob as UpdateJob;
 
 /**
  * Class: CategoryController
@@ -43,7 +45,6 @@ class CategoryController extends Controller
     {
         $categories = $category->all();
 
-
         return view('admin.category.index', compact('categories'));
     }
 
@@ -60,7 +61,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request Request Object
+     * @param CreateCategoryRequest $request Request Object
      *
      * @return Response
      */
@@ -69,41 +70,52 @@ class CategoryController extends Controller
         $this->dispatch(
             new CreateJob($request)
         );
-        return redirect('admin.category.index');
+
+        return redirect(route('admin.category.index'));
     }
 
     /**
-     * Display the specified resource.
+     * Show the Category Resource
      *
-     * @param  int $id
-     * @return Response
+     * @param integer  $id    Id of the Category
+     * @param Category $model Model Object
+     *
+     * @return void
      */
-    public function show($id)
+    public function show($id,Category $model)
     {
-        //
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the category
      *
-     * @param  int $id
+     * @param integer  $id    Id of the Category
+     * @param Category $model Model Object
+     *
      * @return Response
      */
-    public function edit($id)
+    public function edit($id,Category $model)
     {
-        //
+        $category = $model->findOrFail($id);
+
+        return view('admin.category.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request $request
-     * @param  int     $id
+     * @param UpdateCategoryRequest $request Request Object
+     * @param int                   $id      Category ID
+     *
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateCategoryRequest $request, $id)
     {
-        //
+        $this->dispatch(
+            new UpdateJob($request, $id)
+        );
+
+        return redirect(route('admin.category.index'));
     }
 
     /**
