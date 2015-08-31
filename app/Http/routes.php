@@ -12,7 +12,7 @@
  */
 
 
-
+//The Authenticate middleware must be used before Admin Middleware
 Route::group(
     [
     'prefix'=> '/admin',
@@ -46,3 +46,4 @@ Route::resource('questions', 'QuestionController');
 Route::resource('answer', 'AnswerController');
 Route::resource('discussion', 'DiscussionControoler');
 Route::resource('discussionpost', 'DiscussionPostController');
+
