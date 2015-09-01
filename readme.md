@@ -1,4 +1,4 @@
-#learnMCQ [![Build Status](https://travis-ci.org/jhcict/mcq.svg?branch=master)](https://travis-ci.org/jhcict/mcq) [![Build Status](http://128.199.120.87:8080/api/badge/github.com/jhcict/mcq/status.svg?branch=master)](http://128.199.120.87:8080/github.com/jhcict/mcq)
+#learnMCQ [![Build Status](https://travis-ci.org/jhcict/mcq.svg?branch=master)](https://travis-ci.org/jhcict/mcq) [![Build Status](http://128.199.120.87/api/badge/github.com/jhcict/mcq/status.svg?branch=master)](http://128.199.120.87/github.com/jhcict/mcq)
 
 
 
