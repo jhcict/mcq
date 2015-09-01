@@ -8,7 +8,7 @@ script:
   - composer install --no-interaction --prefer-source 
   - cp .env.example .env
   - php artisan key:generate
-  - mysql -e 'create database learn;'
+  - mysql --host="127.0.0.1" -e 'create database learn;'
   - php artisan --env=testing migrate
   - php artisan --env=testing db:seed
 
