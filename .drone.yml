@@ -1,0 +1,11 @@
+image: bradrydzewski/php:5.5
+
+script:
+  - composer self-update
+  - composer install --no-interaction --prefer-source --quiet
+  - cp .env.example .env
+  - php artisan key:generate
+  - mysql -e 'create database learn;'
+  - php artisan --env=testing migrate
+  - php artisan --env=testing db:seed
+
