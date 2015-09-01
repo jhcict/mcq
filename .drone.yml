@@ -1,5 +1,7 @@
 image: bradrydzewski/php:5.5
 
+services:
+  - mysql
 script:
   - sudo apt-get update && sudo apt-get install php5
   - sudo composer self-update
