@@ -24,7 +24,7 @@ class SubjectController extends Controller
     {
         $subjects = $subject->all();
 
-        return view('admin.subject.index', compact($subjects));
+        return view('admin.subject.index', compact('subjects'));
     }
 
     /**
