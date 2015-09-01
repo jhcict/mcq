@@ -1,6 +1,7 @@
 image: bradrydzewski/php:5.5
 
 script:
+  - sudo apt-get update && sudo apt-get install php5
   - sudo composer self-update
   - composer install --no-interaction --prefer-source 
   - cp .env.example .env
