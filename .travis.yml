@@ -12,7 +12,7 @@ before_script:
   - composer install --no-interaction --prefer-source --quiet
   - cp .env.example .env
   - php artisan key:generate
-  -  mysql -e 'create database learn;'
+  - mysql -e 'create database learn;'
   - php artisan --env=testing migrate
   - php artisan --env=testing db:seed
 script:
