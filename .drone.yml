@@ -2,7 +2,7 @@ image: bradrydzewski/php:5.5
 
 script:
   - sudo composer self-update
-  - composer install --no-interaction --prefer-source --quiet
+  - composer install --no-interaction --prefer-source 
   - cp .env.example .env
   - php artisan key:generate
   - mysql -e 'create database learn;'
