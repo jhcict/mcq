@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Edlara v2 : @section('title') Dashboard @show</title>
+<title>learnMCQ: @section('title') Dashboard @show</title>
 @include('admin.layouts.head')
 
 </head>

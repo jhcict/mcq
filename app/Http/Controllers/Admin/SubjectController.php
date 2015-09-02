@@ -3,12 +3,22 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateSubjectRequest;
 use App\Http\Controllers\Controller;
+use App\Subject;
+use App\Category;
+
 
 /**
  * Class: SubjectController
  *
- * @see
+ * @category Category
+ * @package  Package
+ * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
+ * @license  MIT http://opensource.org/licenses/MIT/
+ * @link     http://link/
+ *
+ * @see Controller
  */
 class SubjectController extends Controller
 {
@@ -30,66 +40,54 @@ class SubjectController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Category $category Category Model
+     *
      * @return Response
      */
-    public function create()
+    public function create(Category $category)
     {
-        //
+        $categories = $category->all();
+
+        return view('admin.subject.create',compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request $request
+     * @param Request $request Request Object
+     *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateSubjectRequest $request)
     {
-        //
+        $this->dispatch(
+            new \App\Jobs\Subject\CreateJob($request)
+        );
     }
 
     /**
-     * Display the specified resource.
+     * Show resource
      *
-     * @param  int $id
-     * @return Response
+     * @param integer $id Object ID
+     *
+     * @return void
      */
     public function show($id)
     {
-        //
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Present the Edit view of the resource
      *
-     * @param  int $id
+     * @param mixed   $id    Object ID
+     * @param Subject $model Model Object
+     *
      * @return Response
      */
-    public function edit($id)
+    public function edit($id,Subject $model)
     {
-        //
+        $subject = $model->findOrFail($id);
+        return view('admin.subject.edit', compact('subject'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request $request
-     * @param  int     $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
