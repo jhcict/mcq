@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default">Create</button>
                             </div>
                         </div>
                     </div>
