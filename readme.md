@@ -1,4 +1,4 @@
-#learnMCQ [![Build Status](https://travis-ci.org/jhcict/mcq.svg?branch=master)](https://travis-ci.org/jhcict/mcq) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jhcict/mcq/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jhcict/mcq/?branch=master)
+#learnMCQ [![Build Status](https://travis-ci.org/jhcict/mcq.svg?branch=master)](https://travis-ci.org/jhcict/mcq) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jhcict/mcq/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jhcict/mcq/?branch=master) [![Code Climate](https://codeclimate.com/github/jhcict/mcq/badges/gpa.svg)](https://codeclimate.com/github/jhcict/mcq)
 
 
 
