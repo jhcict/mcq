@@ -16,18 +16,18 @@ class PaperController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function index(Paper $model)
     {
         $papers = $model->all();
-        return view('paper.index',compact('papers'));
+        return view('paper.index', compact('papers'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function create(Subject $subject)
     {

@@ -22,7 +22,7 @@ Route::group(
         \App\Http\Middleware\Admin::class,
         ]
     ],
-    function () {
+    function() {
         Route::resource('user', 'UserController');
         Route::resource('role', 'RoleController');
         Route::resource('category', 'CategoryController');
@@ -46,4 +46,4 @@ Route::resource('answer', 'AnswerController');
 Route::resource('discussion', 'DiscussionControoler');
 Route::resource('discussionpost', 'DiscussionPostController');
 
-Route::controller('/', 'HomeController',['getIndex'=>'index']);
+Route::controller('/', 'HomeController', [ 'getIndex'=>'index' ]);

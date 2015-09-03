@@ -42,13 +42,13 @@ class SubjectController extends Controller
      *
      * @param Category $category Category Model
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function create(Category $category)
     {
         $categories = $category->all();
 
-        return view('admin.subject.create',compact('categories'));
+        return view('admin.subject.create', compact('categories'));
     }
 
     /**
@@ -56,7 +56,7 @@ class SubjectController extends Controller
      *
      * @param Request $request Request Object
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(CreateSubjectRequest $request)
     {
@@ -84,9 +84,9 @@ class SubjectController extends Controller
      * @param mixed   $id    Object ID
      * @param Subject $model Model Object
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
-    public function edit($id,Subject $model)
+    public function edit($id, Subject $model)
     {
         $subject = $model->findOrFail($id);
         return view('admin.subject.edit', compact('subject'));
@@ -101,7 +101,7 @@ class SubjectController extends Controller
      *
      * @return void
      */
-    public function update(UpdateSubjectRequest $subject,$id)
+    public function update(UpdateSubjectRequest $subject, $id)
     {
 
         $this->dispatch(

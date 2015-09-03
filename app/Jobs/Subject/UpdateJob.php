@@ -9,13 +9,13 @@ use App\Subject;
 
 class UpdateJob extends Job implements SelfHandling
 {
-    protected $id,$request;
+    protected $id, $request;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(UpdateSubjectRequest $request,$id)
+    public function __construct(UpdateSubjectRequest $request, $id)
     {
         $this->request = $request;
         $this->id = $id;
@@ -30,7 +30,7 @@ class UpdateJob extends Job implements SelfHandling
     {
         $model->find($this->id)->update(
             $this->request->only(
-                ['name','code','abbreviation']
+                [ 'name', 'code', 'abbreviation' ]
             )
         );
 

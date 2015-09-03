@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Paper extends Model
 {
-    protected $fillable=['name','year','description','subject_id'];
+    protected $fillable = [ 'name', 'year', 'description', 'subject_id' ];
 
     //
     /**
@@ -16,7 +16,7 @@ class Paper extends Model
      */
     public function subject()
     {
-       return  $this->belongsTo('\App\Subject');
+        return  $this->belongsTo('\App\Subject');
     }
 
 }

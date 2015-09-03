@@ -22,7 +22,7 @@ class Subject extends Model
      *
      * @var array
      */
-    protected $fillable=['name','code','abbreviation','category_id'];
+    protected $fillable = [ 'name', 'code', 'abbreviation', 'category_id' ];
 
 
     /**

@@ -27,6 +27,6 @@ class CreateJob extends Job implements SelfHandling
      */
     public function handle(Subject $subject)
     {
-        $subject->create($this->request->only(['name','code','abbreviation','category_id']));
+        $subject->create($this->request->only([ 'name', 'code', 'abbreviation', 'category_id' ]));
     }
 }
