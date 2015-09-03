@@ -63,6 +63,8 @@ class SubjectController extends Controller
         $this->dispatch(
             new \App\Jobs\Subject\CreateJob($request)
         );
+
+        return redirect(route('admin.subject.index'));
     }
 
     /**
@@ -89,5 +91,23 @@ class SubjectController extends Controller
         $subject = $model->findOrFail($id);
         return view('admin.subject.edit', compact('subject'));
     }
+
+
+    /**
+     * Update Resource
+     *
+     * @param UpdateSubjectRequest $subject Request Object
+     * @param mixed                $id      Integer
+     *
+     * @return void
+     */
+    public function update(UpdateSubjectRequest $subject,$id)
+    {
+
+        $this->dispatch(
+            new UpdateJob($subject, $id)
+        );
+    }
+
 
 }
