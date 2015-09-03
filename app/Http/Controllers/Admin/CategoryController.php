@@ -1,15 +1,15 @@
 <?php
 /**
- * CategoryController
- *
- * PHP Version 7.0
- *
- * @category Controller
- * @package  LearnMCQ
- * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
- * @license  MIT http://opensource.org/licenses/MIT/
- * @link     http://mcq.learntechnologies.org/
- */
+     * CategoryController
+     *
+     * PHP Version 7.0
+     *
+     * @category Controller
+     * @package  LearnMCQ
+     * @author   Gnanakeethan Balasubramaniam <gnana@keethan.me>
+     * @license  MIT http://opensource.org/licenses/MIT/
+     * @link     http://mcq.learntechnologies.org/
+     */
 
 namespace App\Http\Controllers\Admin;
 
