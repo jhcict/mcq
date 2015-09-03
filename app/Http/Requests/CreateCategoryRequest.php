@@ -37,7 +37,7 @@ class CreateCategoryRequest extends Request
      */
     public function authorize()
     {
-        if(!Auth::user()->hasRole('admin'))
+        if (!Auth::user()->hasRole('admin'))
             return false;
         return true;
     }

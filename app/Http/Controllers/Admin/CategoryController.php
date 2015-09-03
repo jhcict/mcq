@@ -39,7 +39,7 @@ class CategoryController extends Controller
      *
      * @param Category $category Model Object
      *
-     * @return View
+     * @return \Illuminate\View\View
      */
     public function index(Category $category)
     {
@@ -51,7 +51,7 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
     public function create()
     {
@@ -63,7 +63,7 @@ class CategoryController extends Controller
      *
      * @param CreateCategoryRequest $request Request Object
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(CreateCategoryRequest $request)
     {
@@ -82,7 +82,7 @@ class CategoryController extends Controller
      *
      * @return void
      */
-    public function show($id,Category $model)
+    public function show($id, Category $model)
     {
     }
 
@@ -92,9 +92,9 @@ class CategoryController extends Controller
      * @param integer  $id    Id of the Category
      * @param Category $model Model Object
      *
-     * @return Response
+     * @return \Illuminate\View\View
      */
-    public function edit($id,Category $model)
+    public function edit($id, Category $model)
     {
         $category = $model->findOrFail($id);
 
@@ -107,7 +107,7 @@ class CategoryController extends Controller
      * @param UpdateCategoryRequest $request Request Object
      * @param int                   $id      Category ID
      *
-     * @return Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateCategoryRequest $request, $id)
     {

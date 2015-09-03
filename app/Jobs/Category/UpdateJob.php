@@ -13,6 +13,7 @@ class UpdateJob extends Job implements SelfHandling
     /**
      * Create a new job instance.
      *
+     * @param integer $id
      * @return void
      */
     public function __construct(UpdateCategoryRequest $request,$id)
@@ -28,6 +29,6 @@ class UpdateJob extends Job implements SelfHandling
      */
     public function handle(Category $category)
     {
-        $category->findOrFail($this->id)->update(['name' => $this->request->get('name')]);
+        $category->findOrFail($this->id)->update([ 'name' => $this->request->get('name') ]);
     }
 }

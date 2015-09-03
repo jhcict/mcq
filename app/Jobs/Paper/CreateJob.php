@@ -23,12 +23,11 @@ class CreateJob extends Job implements SelfHandling
     /**
      * Execute the job.
      *
-     * @param CreatePaperRequest $request Request Object
      *
      * @return void
      */
     public function handle(Paper $model)
     {
-        $model->create($this->request->only(['name','description','year','subject_id']));
+        $model->create($this->request->only([ 'name', 'description', 'year', 'subject_id' ]));
     }
 }
