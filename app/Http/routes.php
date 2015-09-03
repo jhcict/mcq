@@ -38,7 +38,6 @@ Route::group(
 
 Route::controller('auth', 'Auth\AuthController');
 Route::controller('password', 'Auth\PasswordController');
-Route::controller('/', 'HomeController');
 
 
 Route::resource('paper', 'PaperController');
@@ -47,3 +46,4 @@ Route::resource('answer', 'AnswerController');
 Route::resource('discussion', 'DiscussionControoler');
 Route::resource('discussionpost', 'DiscussionPostController');
 
+Route::controller('/', 'HomeController',['getIndex'=>'index']);

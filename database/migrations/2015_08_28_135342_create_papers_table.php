@@ -19,7 +19,9 @@ class CreatePapersTable extends Migration
                 $table->string('name');
                 $table->string('description');
                 $table->date('year');
-                $table->boolean('official');
+                $table->boolean('official')->default(false);
+                $table->integer('subject_id')->unsigned();
+                $table->foreign('subject_id')->references('id')->on('subjects')->onDelete('cascade');
                 $table->timestamps();
                 $table->softDeletes();
             }

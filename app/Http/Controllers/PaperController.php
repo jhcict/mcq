@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreatePaperRequest;
+use App\Jobs\Paper\CreateJob;
+use App\Paper;
+use App\Subject;
+
+
 
 class PaperController extends Controller
 {
@@ -12,9 +18,10 @@ class PaperController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function index(Paper $model)
     {
-        //
+        $papers = $model->all();
+        return view('paper.index',compact('papers'));
     }
 
     /**
@@ -22,9 +29,10 @@ class PaperController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create(Subject $subject)
     {
-        //
+        $subjects = $subject->all();
+        return view('paper.create', compact('subjects'));
     }
 
     /**
@@ -33,9 +41,11 @@ class PaperController extends Controller
      * @param  Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreatePaperRequest $request)
     {
-        //
+        $this->dispatch(
+            new CreateJob($request)
+        );
     }
 
     /**
@@ -46,7 +56,6 @@ class PaperController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**

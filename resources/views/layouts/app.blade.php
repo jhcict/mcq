@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>learnMCQ</title>
 
-    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/library/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/app.css">
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -41,8 +40,10 @@
                     @if (Auth::guest())
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/auth/register">Register</a></li>
-                    @else
+                    @elseif(Auth::user()->hasRole('admin'))
                         <li><a href="/admin">Admin</a></li>
+                    @endif
+                    @if(Auth::user()->hasRole('admin')||Auth::user()->hasRole('registered'))
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
