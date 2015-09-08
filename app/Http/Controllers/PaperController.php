@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreatePaperRequest;
+use App\Http\Requests\UpdatePaperRequest;
 use App\Jobs\Paper\CreateJob;
+use App\Jobs\Paper\UpdateJob;
 use App\Paper;
 use App\Subject;
 
@@ -56,6 +58,8 @@ class PaperController extends Controller
      */
     public function show($id)
     {
+        $category = Paper::findOrFail($id);
+        return view('paper.show',compact('category'));
     }
 
     /**
@@ -66,29 +70,18 @@ class PaperController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Paper::findOrFail($id);
+        return view('paper.edit',compact('category'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request $request
-     * @param  int     $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
+    public function update(UpdatePaperRequest $request,$id)
     {
-        //
+        $this->dispatch(
+            new UpdateJob($request,$id)
+        );
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
     public function destroy($id)
     {
-        //
     }
 }
