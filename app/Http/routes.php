@@ -43,7 +43,7 @@ Route::controller('password', 'Auth\PasswordController');
 Route::resource('paper', 'PaperController');
 Route::resource('questions', 'QuestionController');
 Route::resource('answer', 'AnswerController');
-Route::resource('discussion', 'DiscussionControoler');
+Route::resource('discussion', 'DiscussionController');
 Route::resource('discussionpost', 'DiscussionPostController');
 
 Route::controller('/', 'HomeController', [ 'getIndex'=>'index' ]);
