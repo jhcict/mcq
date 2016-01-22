@@ -56,7 +56,6 @@ class EditTest extends TestCase
             ->press('Update')
             ->seePageIs('/admin/category')
             ->see('Updated Category');
-
     }
 
 }

@@ -50,7 +50,6 @@ class CreateTest extends TestCase
             ->press('Create')
             ->seePageIs('/admin/category')
             ->see('Testing Category');
-
     }
 
 }
