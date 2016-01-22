@@ -39,7 +39,7 @@ class CategoryController extends Controller
      *
      * @param Category $category Model Object
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function index(Category $category)
     {
@@ -51,7 +51,7 @@ class CategoryController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function create()
     {
@@ -92,7 +92,7 @@ class CategoryController extends Controller
      * @param integer  $id    Id of the Category
      * @param Category $model Model Object
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function edit($id, Category $model)
     {
