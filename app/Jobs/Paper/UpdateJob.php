@@ -27,6 +27,6 @@ class UpdateJob extends Job implements SelfHandling
      *
      * @return void
      */
-    public function handle(Paper $model)
+    public function handle(Paper $model){
     }
 }
