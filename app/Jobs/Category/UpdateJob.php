@@ -9,14 +9,14 @@ use App\Http\Requests\UpdateCategoryRequest;
 
 class UpdateJob extends Job implements SelfHandling
 {
-    protected $request,$id;
+    protected $request, $id;
     /**
      * Create a new job instance.
      *
      * @param integer $id
      * @return void
      */
-    public function __construct(UpdateCategoryRequest $request,$id)
+    public function __construct(UpdateCategoryRequest $request, $id)
     {
         $this->request = $request;
         $this->id = $id;

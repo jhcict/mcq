@@ -16,7 +16,7 @@ class UpdateJob extends Job implements SelfHandling
      * @param UpdatePaperRequest $request Request Object
      * @param integer $id Object Id
      */
-    public function __construct(UpdatePaperRequest $request,$id)
+    public function __construct(UpdatePaperRequest $request, $id)
     {
         $this->request = $request;
         $this->id = $id;

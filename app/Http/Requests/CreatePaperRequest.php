@@ -14,8 +14,9 @@ class CreatePaperRequest extends Request
      */
     public function authorize()
     {
-        if (Auth::check())
-            return true;
+        if (Auth::check()) {
+                    return true;
+        }
         return false;
     }
 

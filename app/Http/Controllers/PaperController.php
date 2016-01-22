@@ -60,7 +60,7 @@ class PaperController extends Controller
     public function show($id)
     {
         $category = Paper::findOrFail($id);
-        return view('paper.show',compact('category'));
+        return view('paper.show', compact('category'));
     }
 
     /**
@@ -72,13 +72,13 @@ class PaperController extends Controller
     public function edit($id)
     {
         $category = Paper::findOrFail($id);
-        return view('paper.edit',compact('category'));
+        return view('paper.edit', compact('category'));
     }
 
-    public function update(UpdatePaperRequest $request,$id)
+    public function update(UpdatePaperRequest $request, $id)
     {
         $this->dispatch(
-            new UpdateJob($request,$id)
+            new UpdateJob($request, $id)
         );
     }
 
