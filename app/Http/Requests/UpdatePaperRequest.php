@@ -13,7 +13,7 @@ class UpdatePaperRequest extends Request
      */
     public function authorize()
     {
-        if(Auth::check() && (Auth::user()->hasAccess('create_paper')){
+        if(Auth::check() && (Auth::user()->hasAccess('create_paper'))){
             return true;
         }
         return false;
