@@ -18,7 +18,7 @@ class PaperController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function index(Paper $model)
     {
@@ -29,6 +29,7 @@ class PaperController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @return \Illuminate\Contracts\View\Factory
      * @return \Illuminate\View\View
      */
     public function create(Subject $subject)
@@ -41,7 +42,7 @@ class PaperController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  Request $request
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function store(CreatePaperRequest $request)
     {
@@ -54,7 +55,7 @@ class PaperController extends Controller
      * Display the specified resource.
      *
      * @param  int $id
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function show($id)
     {
@@ -66,7 +67,7 @@ class PaperController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int $id
-     * @return Response
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function edit($id)
     {

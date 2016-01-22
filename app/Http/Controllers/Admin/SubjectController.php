@@ -28,7 +28,7 @@ class SubjectController extends Controller
      *
      * @param \App\Subject $subject Model Class
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function index(\App\Subject $subject)
     {
@@ -42,7 +42,7 @@ class SubjectController extends Controller
      *
      * @param Category $category Category Model
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function create(Category $category)
     {
@@ -84,7 +84,7 @@ class SubjectController extends Controller
      * @param mixed   $id    Object ID
      * @param Subject $model Model Object
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory
      */
     public function edit($id, Subject $model)
     {
