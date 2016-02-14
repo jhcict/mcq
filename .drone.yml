@@ -1,0 +1,15 @@
+image: bradrydzewski/php:5.5
+
+services:
+  - mysql
+script:
+  - sudo apt-get update && sudo apt-get install php5
+  - sudo composer self-update
+  - composer install --no-interaction --prefer-source 
+  - cp .env.example .env
+  - php artisan key:generate
+  - mysql --host="127.0.0.1" -u root -e 'create database mcq;'
+  - php artisan --env=testing migrate
+  - php artisan --env=testing db:seed
+  - php -d xdebug.max_nesting_level=1000 vendor/bin/phpunit
+
