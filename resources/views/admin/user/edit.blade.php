@@ -25,7 +25,7 @@
       <!-- .form-group -->
       <div class="form-group">
         {{Form::label('group', 'Group', array('class' => 'label','style'=>'color:#000;'))}}
-        {{Form::select('group',['admin'=>'Administrator','moderator'=>'Moderator','registered'=>'Registered'],'registered',['class'=>'pull-right','width'=>100])}}
+        {{Form::select('group',['admin'=>'Administrator','moderator'=>'Moderator','registered'=>'Registered'],null,['class'=>'pull-right','width'=>100])}}
       </div>
       <br>
       <br>
